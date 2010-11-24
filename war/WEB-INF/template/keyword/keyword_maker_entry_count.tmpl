@@ -1,0 +1,27 @@
+<%= switch(count) {
+	case {it >= 1000} : return 'f:id:fumobot:20090528011711p:image'
+	case {it >= 300}  : return 'f:id:fumobot:20090528010644p:image'
+	case {it >= 100}  : return 'f:id:fumobot:20090528010646p:image'
+	case {it >= 30}   : return 'f:id:fumobot:20090528010643p:image'
+	default           : return ''
+}%>はーい、お答えします。
+ 
+これまで${who}さんに教えてもらった
+ 
+テンプレート数は${templateCount}件です。<%
+templateDetail.each{ phase, listInPhase -> %>
+　　フェーズ[${phase}] … ${listInPhase.size()}件<% } %>
+ 
+キーフレーズ数は${keyPhraseCount}件です。<%
+keyPhraseDetail.each{ len, listInKeyPhrase -> %>
+　　文字数[${len}] … ${listInKeyPhrase.size()}件<% } %>
+ 
+合計すると${count}件ですっ！
+ 
+<%= switch(count) {
+	case {it >= 1000} : return "${who}さんの方が私よりもキーワードメーカーに詳しいですよねっ！"
+	case {it >= 300}  : return "${who}さん、いつも遊んでくれて、私うれしいです。\nふもぼメダルプラチナまであと${1000 - count}件です。"
+	case {it >= 100}  : return "${who}さん、たーくさん遊んでくれてうれしいです。\nふもぼメダルゴールドまであと${300 - count}件です。"
+	case {it >= 30}   : return "${who}さん、これからもよろしくお願いします。\nふもぼメダルシルバーまであと${100 - count}件です。"
+	default           : return "${who}さん、もっといっぱい遊んで遊んでっ！\nふもぼメダルブロンズまであと${30 - count}件です。"
+}%>

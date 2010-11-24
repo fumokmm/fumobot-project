@@ -1,0 +1,34 @@
+<%
+    def timing = hatenahaiku4j.util.DateUtil.now
+
+%><%= switch(count) {
+	case {it >= 150} : return 'f:id:fumobot:20090528011711p:image'
+	case {it >= 100} : return 'f:id:fumobot:20090528010644p:image'
+	case {it >= 60}  : return 'f:id:fumobot:20090528010646p:image'
+	case {it >= 30}  : return 'f:id:fumobot:20090528010643p:image'
+	default          : return ''
+}%>${userName}さん、${count}回目のキーワード占いのご利用ありがとうございます。
+ 
+${userName}さんの今日のラッキーキーワードは【${luckey}】です。
+<%= switch(timing[Calendar.SECOND].toInteger()){
+    case {it in ( 0..<10)} : return "仲良くしてるハイカーさんに【${up}】というキーワードを薦めると運気がアップするかも。"
+    case {it in (10..<20)} : return "【${up}】というキーワードに関連キーワードを追加すると運気がアップするかも。"
+    case {it in (20..<30)} : return "【${up}】というキーワードに投稿すると憧れのハイカーさんに急接近できるかも。"
+    case {it in (30..<40)} : return "【${up}】というキーワードを眺めているだけで幸せな気分になれるかも。"
+    case {it in (40..<45)} : return "【${up}】というキーワードで、もしかしたら恋が実るかも。"
+    case {it in (45..<50)} : return "【${up}】というキーワードで、金運がアップするかも。"
+    default                : return "【${up}】というキーワードに投稿すると運気がアップするかも。"
+} %>
+【${star}】というキーワードに投稿するとスターがいっぱいもらえるかも。
+<%
+  if (timing[Calendar.HOUR_OF_DAY].toInteger() <= 10 && timing[Calendar.SECOND].toInteger() < 30) {
+%>午前中は【${down}】というキーワードへ、
+午後からは【${help}】というキーワードへ投稿するとファンが増えるかも。
+<%
+  } else {
+%>【${down}】というキーワードへの投稿は今日のところは控えたほうがいいかも。
+でもどうしても投稿したくなったら【${help}】というキーワードなら大丈夫そうです。
+<%
+  }
+%> 
+あなたに幸運が訪れますように。

@@ -1,0 +1,13 @@
+<%= switch(count) {
+	case {it >= 1000} : return 'f:id:fumobot:20090528011711p:image'
+	case {it >= 300}  : return 'f:id:fumobot:20090528010644p:image'
+	case {it >= 100}  : return 'f:id:fumobot:20090528010646p:image'
+	case {it >= 30}   : return 'f:id:fumobot:20090528010643p:image'
+	default           : return ''
+}%>${userName}さん、聞いてくれてありがとう。
+こんなキーワードはいかがですか？
+ 
+<% list.each{
+%>${it}
+<% }
+%>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>${date}のアルバム一覧</title>
+<link rel="stylesheet" type="text/css" href="/hikerservice/css/haiku_collection.css">
+<style>
+h1 {
+	background-color: #b8cbd9
+}
+h2 {
+	background-color: #99cc00
+}
+img {
+	max-height   : 300px;
+	max-width    : 300px;
+	border-width : 0;
+}
+</style>
+</head>
+<body>
+<h1>Hiker's public timeline entry images at ${date} (${imageMap*.count.sum()})</h1>
+<%
+imageMap.each {
+%>
+<h3><a href="./<%= it.keywordMD5 %>/"><%= it.keyword %></a> (<%= it.count %>)</h3>
+<%
+}
+%>
+<br/>
+<hr/>
+<div style="text-align:right"><a href="http://h.hatena.ne.jp/keyword/bot/fumobot powered by Groovy" target="_blank">bot/fumobot powered by Groovy</a></div>
+<br/>
+
+</body>
+</html>

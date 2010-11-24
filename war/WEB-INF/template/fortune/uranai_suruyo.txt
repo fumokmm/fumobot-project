@@ -1,0 +1,7 @@
+<%=
+switch(hatenahaiku4j.util.DateUtil.now[Calendar.HOUR_OF_DAY]) {
+	case    {it in ( 5.. 9)} : return 'おはようございます。\n今日一日のはじまりに[[キーワード占い]]はいかがですか～？'
+	case    {it in (12..13)} : return 'こんにちは～。\nお昼休み、ちょっと息抜きに[[キーワード占い]]はいかがですか～？'
+	default                  : return '[[キーワード占い]]するよ～。'
+}
+%>

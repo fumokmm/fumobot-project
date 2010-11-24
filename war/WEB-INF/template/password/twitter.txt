@@ -1,0 +1,6 @@
+# for twitter
+# userId=password
+# ex) fumokmm=xxxxxxxxxx
+
+fumobot=xxxxxxxxxx
+macalloni=xxxxxxxxxx

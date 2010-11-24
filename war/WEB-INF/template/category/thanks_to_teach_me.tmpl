@@ -1,0 +1,61 @@
+<%	int size = [ // 全リストのサイズ
+		unknownNewList,
+		knownDeleteList,
+		knownNewList,
+		unknownDeleteList,
+	]*.size().sum()
+%>${who}さん、<%= switch(size) {
+	case {it > 20} : return 'たくさんた～くさん教えてくれてありがとうっ！'
+	case {it > 15} : return 'たくさん教えてくれてありがとうっ！'
+	case {it > 10} : return 'い～っぱい教えてくれてありがとうっ！'
+	case {it >  5} : return 'いっぱい教えてくれてありがとうっ！'
+	default        : return '教えてくれてありがとうっ！'
+} %><% if (unknownNewList) {
+%>
+ 
+<% unknownNewList.eachWithIndex{ it, idx ->
+%>【[[${it.keyword}]]】は「${it.category}」${idx < unknownNewList.size() - 1 ? 'で、' : 'ですね。'}
+<% } %> 
+<%= switch(unknownNewList.size()) {
+		case {it > 20} : return 'ううっ…ちょっと覚えるのが大変でしたが…ふもぼ、頑張って覚えました！'
+		case {it > 15} : return 'ん～と…え～と…う～ん…、よぉ～し、頑張って覚えました！'
+		case {it > 10} : return 'ちょっと多かったけど、頑張って覚えました！'
+		case {it >  5} : return '・・・、はい、覚えました！'
+		default        : return 'はい、覚えました！'
+	} %><%
+} // end of if (unknownNewList) {
+%><% if (knownDeleteList) {
+%>
+ 
+<% knownDeleteList.eachWithIndex{ it, idx ->
+%>【[[${it.keyword}]]】が「${it.category}」${idx < knownDeleteList.size() - 1 ? 'っていうのと、' : 'っていうのを忘れるんですね。'}
+<% } %> 
+<%= switch(knownDeleteList.size()) {
+		case {it > 20} : return 'ううっ…ちょっと忘れるのが大変でしたが…ふもぼ、頑張って忘れました！'
+		case {it > 15} : return 'ん～と…え～と…う～ん…、よぉ～し、頑張って忘れました！'
+		case {it > 10} : return 'ちょっと多かったけど、頑張って忘れました！'
+		case {it >  5} : return '・・・、はい、忘れました！'
+		default        : return 'はい、忘れました！'
+	} %><%
+} // end of if (knownDeleteList) {
+%><% if (knownNewList) {
+%>
+ 
+<% knownNewList.each{
+%>【[[${it.keyword}]]】が「${it.category}」っていうのは前に${it.oldTeacher}さんにも教えてもらいました。
+<% } %> 
+<%= switch(knownDeleteList.size()) {
+		default        : return 'ちゃんと覚えてますよ～。'
+	} %><%
+} // end of if (knownNewList) {
+%><% if (unknownDeleteList) {
+%>
+ 
+<% unknownDeleteList.eachWithIndex{ it, idx ->
+%>【[[${it.keyword}]]】が「${it.category}」${idx < unknownDeleteList.size() - 1 ? 'で、' : 'っていうのは'}
+<% } %> 
+<%= switch(knownDeleteList.size()) {
+		default        : return 'もともと知りませんでしたよ。'
+	} %><%
+} // end of if (unknownDeleteList) {
+%>

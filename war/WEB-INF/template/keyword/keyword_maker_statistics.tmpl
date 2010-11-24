@@ -1,0 +1,13 @@
+${who}さん、聞いてくれてありがとう。統計をお答えします。
+ 
+*** [[キーワードメーカー]]の統計 (${now}現在) ***
+ 
+テンプレート数は${templateCount}件です。<%	
+templateDetail.each{ phase, listInPhase -> %>
+　　フェーズ[${phase}] … ${listInPhase.size()}件<% } %>
+ 
+キーフレーズ数は${keyPhraseCount}件です。<%
+keyPhraseDetail.each{ len, listInKeyPhrase -> %>
+　　文字数[${len}] … ${listInKeyPhrase.size()}件<% } %>
+ 
+合計すると${totalCount}件ですっ！

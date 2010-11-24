@@ -1,0 +1,65 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <servlet>
+        <servlet-name>GroovletServlet</servlet-name>
+        <servlet-class>groovyx.gaelyk.GaelykServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TemplateServlet</servlet-name>
+        <servlet-class>groovyx.gaelyk.GaelykTemplateServlet</servlet-class>
+    </servlet>
+    <!-- Uncomment the following servlet definition if you want to receive XMPP messages-->
+    <!--
+    <servlet>
+        <servlet-name>XmppServlet</servlet-name>
+        <servlet-class>groovyx.gaelyk.GaelykXmppServlet</servlet-class>
+    </servlet>
+    -->
+
+    <servlet-mapping>
+        <servlet-name>GroovletServlet</servlet-name>
+        <url-pattern>*.groovy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TemplateServlet</servlet-name>
+        <url-pattern>*.gtpl</url-pattern>
+    </servlet-mapping>
+    <!-- Uncomment the following servlet mapping if you want to receive XMPP messages-->
+    <!--
+    <servlet-mapping>
+        <servlet-name>XmppServlet</servlet-name>
+        <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+    </servlet-mapping>
+    -->
+
+    <welcome-file-list> 
+        <welcome-file>index.gtpl</welcome-file> 
+    </welcome-file-list>
+    
+	<!-- ======================================
+	      security
+	     ====================================== -->
+	<security-constraint>
+        <web-resource-collection>
+	        <web-resource-name>bot crawl, command, and entry</web-resource-name>
+            <url-pattern>/bot/**.groovy</url-pattern>
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>batch data regist command</web-resource-name>
+            <url-pattern>/batch/**.groovy</url-pattern>
+        </web-resource-collection>
+        <web-resource-collection>
+	        <web-resource-name>admin area(*.groovy)</web-resource-name>
+            <url-pattern>/admin/**.groovy</url-pattern>
+        </web-resource-collection>
+        <web-resource-collection>
+	        <web-resource-name>admin area(*.gtpl)</web-resource-name>
+            <url-pattern>/admin/**.gtpl</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+<!-- 
+-->
+
+</web-app>

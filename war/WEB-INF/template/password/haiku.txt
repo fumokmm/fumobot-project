@@ -1,0 +1,7 @@
+# for hatena haiku
+# userId=password
+# ex) fumokmm=xxxxxxxxxx
+
+fumobot=xxxxxxxxxxx
+macalloni=xxxxxxxxxxx
+fumoinfoboard=xxxxxxxxxxx

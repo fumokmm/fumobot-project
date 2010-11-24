@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+  <datastore-index kind="KeywordTemplate" ancestor="false" source="manual">
+    <property name="keyPhraseNum" direction="asc"/>
+    <property name="uuid" direction="asc"/>
+  </datastore-index>
+  <datastore-index kind="KeywordTemplate" ancestor="false" source="manual">
+    <property name="keyPhraseNum" direction="asc"/>
+    <property name="uuid" direction="desc"/>
+  </datastore-index>
+
+  <datastore-index kind="KeywordKeyPhrase" ancestor="false" source="manual">
+    <property name="size" direction="asc"/>
+    <property name="uuid" direction="asc"/>
+  </datastore-index>
+  <datastore-index kind="KeywordKeyPhrase" ancestor="false" source="manual">
+    <property name="size" direction="asc"/>
+    <property name="uuid" direction="desc"/>
+  </datastore-index>
+
+</datastore-indexes>

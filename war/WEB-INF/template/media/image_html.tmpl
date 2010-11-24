@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>${date}のアルバム一覧</title>
+<link rel="stylesheet" type="text/css" href="/hikerservice/css/haiku_collection.css">
+<style>
+h1 {
+	background-color: #b8cbd9
+}
+h2 {
+	background-color: #99cc00
+}
+img {
+	max-height   : 300px;
+	max-width    : 300px;
+	border-width : 0;
+}
+</style>
+</head>
+<body>
+<br/>
+<table width="100%">
+	<tr>
+		<td width="33%" style="text-align:left"><a href="../${keywordPrev}/">${keywordPrev ? '＜＜' : ''}</a></td>
+		<td width="34%" style="text-align:center"><a href="../">戻る</a></td>
+		<td width="33%" style="text-align:right"><a href="../${keywordNext}/">${keywordNext ? '＞＞' : ''}</a></td>
+	</tr>
+</table>
+<h2>In <a href="http://h.hatena.ne.jp/keyword/<%= keyword %>"><%= keyword %></a> images at ${date} (${imageList.size()})</h2>
+<div>
+<%
+imageList.each{
+%>
+	<table cellpadding="1" cellspacing="3" style="display:inline">
+	<tr><td><a href="http://h.hatena.ne.jp/<%= it.user_id %>/<%= it.status_id %>" title="<%= it.keyword %> by <%= it.user_id %>" target="_blank"><img src="<%= it.uri %>"/></a></td></tr>
+	<tr><td style="text-align:right">by <a href="http://h.hatena.ne.jp/${it.user_id}/" target="_blank"><img src="http://www.hatena.ne.jp/users/${it.user_id[0..1]}/${it.user_id}/profile_s.gif" />${it.user_id}さん</a></td></tr>
+	</table>
+<%
+}
+%>
+</div>
+<br/>
+<table width="100%">
+	<tr>
+		<td width="33%" style="text-align:left"><a href="../${keywordPrev}/">${keywordPrev ? '＜＜' : ''}</a></td>
+		<td width="34%" style="text-align:center"><a href="../">戻る</a></td>
+		<td width="33%" style="text-align:right"><a href="../${keywordNext}/">${keywordNext ? '＞＞' : ''}</a></td>
+	</tr>
+</table>
+<hr/>
+<div style="text-align:right"><a href="http://h.hatena.ne.jp/keyword/bot/fumobot powered by Groovy" target="_blank">bot/fumobot powered by Groovy</a></div>
+<br/>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+${who}さんへ。
+<%
+if (keywordMap) {
+%> 
+ハイカーのみなさんに教えてもらったキーワードの分類をお知らせしますね。
+ 
+<%
+keywordMap.each{ keyword, categoryList ->
+	%>【[[${keyword}]]】
+<%
+		categoryList.each{ category ->
+			%>「${category}」
+<%
+		}
+	%> 
+<%
+	}
+%>です！
+<%
+}
+%><%
+if (iDontKnowKeywordList) {
+%> 
+ごめんなさい（＞＜）
+ 
+<% iDontKnowKeywordList.each{ %>【[[${it}]]】
+<% }
+%> 
+っていうキーワードはまだ知らないです…。
+${who}さん、教えて教えて！<%
+} %>

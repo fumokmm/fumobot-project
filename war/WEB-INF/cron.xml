@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+
+	<!-- =================================================================== -->
+	<!-- crawler                                                             -->
+	<!-- =================================================================== -->
+
+	<!-- keywords count -->
+	<cron>
+		<url>/bot/crawler/keywords_count.groovy</url>
+		<description>crawl for keywords count</description>
+		<schedule>every 31 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- crawl haiku status -->
+	<cron>
+		<url>/bot/crawler/haiku_status.groovy?page=1</url>
+		<description>crawl for haiku_status(page1)</description>
+		<schedule>every 3 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+	<cron>
+		<url>/bot/crawler/haiku_status.groovy?page=2</url>
+		<description>crawl for haiku_status(page 2)</description>
+		<schedule>every 3 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+	<cron>
+		<url>/bot/crawler/haiku_status.groovy?page=1&amp;type=id</url>
+		<description>crawl for id page status</description>
+		<schedule>every 5 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- =================================================================== -->
+	<!-- commander                                                           -->
+	<!-- =================================================================== -->
+
+	<!-- keywords count -->
+	<cron>
+		<url>/bot/commander/keywords_count.groovy</url>
+		<description>command for keywords count notification (00:00)</description>
+		<schedule>every day 00:00</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+	<cron>
+		<url>/bot/commander/keywords_count.groovy</url>
+		<description>command for keywords count notification (12:00)</description>
+		<schedule>every day 12:00</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- keyword uranai -->
+	<cron>
+		<url>/bot/commander/keyword_uranai.groovy</url>
+		<description>command for keyword_uranai</description>
+		<schedule>every 1 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- keyword maker -->
+	<cron>
+		<url>/bot/commander/keyword_maker.groovy</url>
+		<description>command for keyword_maker</description>
+		<schedule>every 1 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- =================================================================== -->
+	<!-- bot                                                                 -->
+	<!-- =================================================================== -->
+
+	<!-- fumobot -->
+	<cron>
+		<url>/bot/entry.groovy?bot=fumobot</url>
+		<description>entry by fumobot</description>
+		<schedule>every 3 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- macalloni -->
+	<cron>
+		<url>/bot/entry.groovy?bot=macalloni</url>
+		<description>entry by macalloni</description>
+		<schedule>every 3 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+	<!-- =================================================================== -->
+	<!-- batch                                                               -->
+	<!-- =================================================================== -->
+
+	<!-- invoke ring batch -->
+	<cron>
+		<url>/batch/ring_batch.groovy</url>
+		<description>invoke ring batch</description>
+		<schedule>every 4 minutes</schedule>
+		<timezone>Asia/Tokyo</timezone>
+	</cron>
+
+</cronentries>

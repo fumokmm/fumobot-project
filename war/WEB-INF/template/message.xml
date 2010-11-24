@@ -1,0 +1,95 @@
+<message>
+  <greetings>
+    <greeting hour="0"  value="日付も変わりましたね。" />
+    <greeting hour="1"  value="真夜中に失礼しま～す。" />
+    <greeting hour="2"  value="真夜中に失礼しま～す。" />
+    <greeting hour="3"  value="みんなまだ起きてるの？" />
+    <greeting hour="4"  value="そろそろ夜が明けますね。" />
+    <greeting hour="5"  value="おはようございま～す。" />
+    <greeting hour="6"  value="おはようございま～す。" />
+    <greeting hour="7"  value="おはようございま～す。" />
+    <greeting hour="8"  value="おはようございま～す。" />
+    <greeting hour="9"  value="よいしょっと。" />
+    <greeting hour="10" value="よいしょっと。" />
+    <greeting hour="11" value="よいしょっと。" />
+    <greeting hour="12" value="こんにちは～お昼ですね。" />
+    <greeting hour="13" value="こんにちは～。" />
+    <greeting hour="14" value="こんにちは～。" />
+    <greeting hour="15" value="こんにちは～。" />
+    <greeting hour="16" value="こんにちは～。" />
+    <greeting hour="17" value="もう夕方ですね～。" />
+    <greeting hour="18" value="こんばんわ～。" />
+    <greeting hour="19" value="こんばんわ～。" />
+    <greeting hour="20" value="こんばんわ～。" />
+    <greeting hour="21" value="子どもはそろそろ寝る時間だよ～。" />
+    <greeting hour="22" value="夜も更けてきましたね。" />
+    <greeting hour="23" value="夜も更けてきましたね。" />
+  </greetings>
+  <entries>
+    <entry count="0">
+      <whats-keyword value="の作ったはいいんだけど、見放された" />
+      <apodosis value="気に入ったキーワードがあったら、初エントリしてみて欲しい！" />
+    </entry>
+    <entry count="1">
+      <whats-keyword value="の勢いで作っちゃったのかな？という" />
+      <whats-keyword value="の何となく作られた" />
+      <apodosis value="気に入ったキーワードがあったら作ったハイカーさんの意思を引き継いでみて欲しい！" />
+    </entry>
+    <entry count="10">
+      <whats-keyword value="程度の勢いで作っちゃったのかな？という" />
+      <apodosis value="これはっていうキーワードがあったら、その勢いに乗ってあげて欲しい！" />
+    </entry>
+    <entry count="20">
+      <whats-keyword value="程度のごく一部で盛り上がった" />
+      <apodosis value="ハイカーさんの力で陽の目を見せてあげて欲しい！" />
+    </entry>
+    <entry count="30">
+      <whats-keyword value="程度のプチ盛り上がりした" />
+      <apodosis value="プチ盛り上がりをさらに盛り上げてみて欲しい！" />
+    </entry>
+    <entry count="40">
+      <whats-keyword value="程度のアラフォーな" />
+      <apodosis value="気に入ったキーワードがあったら盛り上げて欲しい！" />
+    </entry>
+    <entry count="50">
+      <whats-keyword value="程度の50・80喜んでな" />
+      <apodosis value="なんかほっとけないなぁっていうキーワードがあったら覗いてみて欲しい！" />
+    </entry>
+    <entry count="60">
+      <whats-keyword value="程度のある時期突発的に流行った" />
+      <apodosis value="時間があったら覗いていって欲しい！" />
+    </entry>
+    <entry count="70">
+      <whats-keyword value="程度ということで、人の噂と同じくらい頑張った" />
+      <apodosis value="ビビビっときたら、クリックしてみて欲しい！" />
+    </entry>
+    <entry count="80">
+      <whats-keyword value="程度の50・80喜んでな" />
+      <apodosis value="埋もれたキーワードを復活させてあげて欲しい！" />
+    </entry>
+    <entry count="90">
+      <whats-keyword value="程度のもうちょっとで100件だったのにねぇ…という" />
+      <apodosis value="愛の手で100件越えのキーワードにしてあげて欲しい！" />
+    </entry>
+    <entry count="100">
+      <whats-keyword value="程度のワンハンドレッドな" />
+      <apodosis value="気になるキーワードありましたか？" />
+    </entry>
+    <entry count="150">
+      <whats-keyword value="程度のゲリラ的に流行った" />
+      <apodosis value="気になるキーワードありましたか？" />
+    </entry>
+    <entry count="200">
+      <whats-keyword value="程度でまだまだ伸びる素質アリの" />
+      <apodosis value="気になるキーワードありましたか？" />
+    </entry>
+    <entry count="250">
+      <whats-keyword value="程度のハイカーさんの目を惹いた" />
+      <apodosis value="気になるキーワードあったらちょっと覗いてみてね。" />
+    </entry>
+    <entry count="300">
+      <whats-keyword value="程度のハイカーさんのツボにはまった" />
+      <apodosis value="気になるキーワードあったらちょっと覗いてみてね。" />
+    </entry>
+  </entries>
+</message>

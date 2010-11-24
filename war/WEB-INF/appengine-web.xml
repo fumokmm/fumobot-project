@@ -1,0 +1,26 @@
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>fumo-bot</application>
+    
+    <version>1</version>
+
+    <!-- Uncomment this section if you want your applicat to be able to receive XMPP messages -->
+    <!-- And create a file named xmpp.groovy in /WEB-INF/groovy -->
+    <!--
+    <inbound-services>
+        <service>xmpp_message</service>
+    </inbound-services>
+    -->
+
+	<system-properties>
+		<!-- logging -->
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties" />
+		<!-- encoding -->
+		<property name="file.encoding" value="UTF-8"/>
+		<property name="groovy.source.encoding" value="UTF-8"/>
+	</system-properties>
+    
+    <static-files>
+        <exclude path="/WEB-INF/**.groovy" />
+        <exclude path="**.gtpl" />
+    </static-files>
+</appengine-web-app>

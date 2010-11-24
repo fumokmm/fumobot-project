@@ -1,0 +1,13 @@
+ハイカーのみなさん、こんばんは。
+ 
+${date}のパブリックなキーワードに投稿された画像は
+だいたい${count}件くらいあったみたいですね。
+ 
+[${albumURL}:title=キーワード毎のハイカーさんの画像を集めてアルバムにしてみた]よ～。
+ 
+投稿数TOP10のキーワードはこんな感じだったよ！
+
+<% imageMap.each {
+%>[${albumURL}${it.keywordMD5}/:title=${it.keyword}] (${it.count} entries)
+<% } %> 
+ よかったら見てみてね！
